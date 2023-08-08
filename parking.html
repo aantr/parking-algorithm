@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Parking algorithm</title>
+	<meta charset='utf-8' />
+	<style>
+		body {
+			font-family: helvetica;
+			font-size: 14px;
+		}
+		.container {
+			display: grid;
+			gap: 20px;
+			grid-template-columns: 400px auto;
+		}
+		.container2 {
+			display: grid;
+			gap: 10px;
+			grid-template-columns: 50% 50%;
+		}
+
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="box-1"> 
+			<div class="container2">
+				<div> 
+					<div> 
+						<label><b>Width & Height</b></label><br>
+						<input value=1 style="width: 5em" type="number" id="parking-width" />
+						<input value=1 style="width: 5em"type="number" id="parking-height" />
+					</div>
+					<div id="form_clients">
+					</div>
+				</div>
+				<div>
+					<button type="button" class="remove" onclick="del_clicked()" style="width: 25px" id="del-button">-</button>
+					<button type="button" class="add" onclick="add_clicked()" style="width: 25px" id="add-button">+</button>
+					<button type="button" onclick="solve_clicked()" id="solve-button">Solve</button>
+				</div>
+			</div>
+			
+			
+		</div>
+		<div class="box-2">
+			<canvas height='720' width='720' id='draw_canvas'></canvas>
+
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript" src="parking.js"></script>
+
+</html>
